@@ -1,0 +1,124 @@
+Index: src/main/java/me/kimeunsoo/springbootdeveloper/TestController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package me.kimeunsoo.springbootdeveloper;\r\n/*\r\n    혹시나 기능 구현을 했는데 적용되지 않을 경우\r\n\r\n    1. 서버 껐다가 킵니다.\r\n    2. 그런데 안되는 경우에는 ctrl + s 눌러서 세이브하시고\r\n    3. intellij를 껐다가 킵니다.\r\n    4. 서버 재실행합니다.\r\n    5. 그러면 완료되는 경우가 많습니다.\r\n */\r\nimport org.springframework.web.bind.annotation.GetMapping;\r\nimport org.springframework.web.bind.annotation.RestController;\r\n\r\n@RestController\r\npublic class TestController {\r\n    @GetMapping(\"/test\")\r\n    public String test(){\r\n        return \"Hello World!\";\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/me/kimeunsoo/springbootdeveloper/TestController.java b/src/main/java/me/kimeunsoo/springbootdeveloper/TestController.java
+--- a/src/main/java/me/kimeunsoo/springbootdeveloper/TestController.java	(revision b37c02020474e071f89828889129a27a8acc2855)
++++ b/src/main/java/me/kimeunsoo/springbootdeveloper/TestController.java	(date 1735044119824)
+@@ -8,13 +8,21 @@
+     4. 서버 재실행합니다.
+     5. 그러면 완료되는 경우가 많습니다.
+  */
++import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.web.bind.annotation.GetMapping;
+ import org.springframework.web.bind.annotation.RestController;
+ 
++import java.lang.reflect.Member;
++import java.util.List;
++
+ @RestController
+ public class TestController {
++    @Autowired  //TestService Bean 주입
++    TestService testService;
++
+     @GetMapping("/test")
+-    public String test(){
+-        return "Hello World!";
++    public  List<Member> getAllMembers(){
++        List<Member> members = testService.getAllMembers();
++        return members;
+     }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectId\" id=\"2qf5JlyAdh22r2J1UIlkpBFR5R1\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision b37c02020474e071f89828889129a27a8acc2855)
++++ b/.idea/workspace.xml	(date 1735044161499)
+@@ -1,4 +1,78 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="69a90b9a-0ecf-40e1-b2de-80cf8647a96d" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/me/kimeunsoo/springbootdeveloper/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kimeunsoo/springbootdeveloper/TestController.java" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="ExternalProjectsData">
++    <projectState path="$PROJECT_DIR$">
++      <ProjectState />
++    </projectState>
++  </component>
++  <component name="ExternalProjectsManager">
++    <system id="GRADLE">
++      <state>
++        <projects_view>
++          <tree_state>
++            <expand>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="chapter03" type="f1a62948:ProjectNode" />
++              </path>
++            </expand>
++            <select />
++          </tree_state>
++        </projects_view>
++      </state>
++    </system>
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Interface" />
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
++  </component>
++  <component name="ProjectColorInfo"><![CDATA[{
++  "associatedIndex": 2
++}]]></component>
+   <component name="ProjectId" id="2qf5JlyAdh22r2J1UIlkpBFR5R1" />
++  <component name="ProjectLevelVcsManager">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.git.unshallow": "true",
++    "git-widget-placeholder": "Merging main",
++    "kotlin-language-version-configured": "true"
++  }
++}]]></component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="69a90b9a-0ecf-40e1-b2de-80cf8647a96d" name="Changes" comment="" />
++      <created>1735044124268</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1735044124268</updated>
++    </task>
++    <servers />
++  </component>
+ </project>
+\ No newline at end of file
