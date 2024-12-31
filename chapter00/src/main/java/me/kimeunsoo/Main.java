@@ -1,4 +1,4 @@
-package me.kimeunsoo;
+gitpackage me.kimeunsoo;
 /*
     스프링 부트 3 프로젝트 만들기
 
