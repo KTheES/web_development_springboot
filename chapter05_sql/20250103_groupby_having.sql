@@ -53,6 +53,7 @@ SELECT country, city, count(DISTINCT id) AS uniqueUserCnt
 -- SUBSTR(컬럼명, 시작값, 글자개수)
 -- users에서 월별(e.g. 2013-10) 가입 회원 수를 출력할 것.
 -- 가입일시 컬럼 활용하고, 최신순으로 정렬할 것.
+
 SELECT SUBSTR(created_at, 1 , 7) AS month, count(DISTINCT id) AS uniqueUserCnt
 	FROM users
 	GROUP BY SUBSTR(created_at, 1 , 7)	
