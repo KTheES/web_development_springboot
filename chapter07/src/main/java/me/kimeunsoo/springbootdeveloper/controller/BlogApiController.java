@@ -2,14 +2,14 @@ package me.kimeunsoo.springbootdeveloper.controller;
 
 
 import lombok.RequiredArgsConstructor;
-import me.kimeunsoo.springbootdeveloper.dto.UpdateArticleRequest;
-import org.springframework.web.bind.annotation.*;
 import me.kimeunsoo.springbootdeveloper.domain.Article;
 import me.kimeunsoo.springbootdeveloper.dto.AddArticleRequest;
 import me.kimeunsoo.springbootdeveloper.dto.ArticleResponse;
+import me.kimeunsoo.springbootdeveloper.dto.UpdateArticleRequest;
 import me.kimeunsoo.springbootdeveloper.service.BlogService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 

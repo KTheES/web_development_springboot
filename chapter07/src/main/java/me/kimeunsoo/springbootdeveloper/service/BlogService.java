@@ -2,10 +2,9 @@ package me.kimeunsoo.springbootdeveloper.service;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import me.kimeunsoo.springbootdeveloper.dto.UpdateArticleRequest;
-import org.springframework.web.bind.annotation.GetMapping;
 import me.kimeunsoo.springbootdeveloper.domain.Article;
 import me.kimeunsoo.springbootdeveloper.dto.AddArticleRequest;
+import me.kimeunsoo.springbootdeveloper.dto.UpdateArticleRequest;
 import me.kimeunsoo.springbootdeveloper.repository.BlogRepository;
 import org.springframework.stereotype.Service;
 
