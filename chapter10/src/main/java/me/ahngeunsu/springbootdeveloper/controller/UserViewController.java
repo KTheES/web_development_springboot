@@ -16,6 +16,7 @@ public class UserViewController {
     public String login() {
         return "oauthLogin";
     }
+    // https://developers.google.com/identity/branding-guidelines?hl=ko 여기서 다운받을 수 있음.
 
     @GetMapping("/signup")
     public String signup() {

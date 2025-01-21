@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>블로그 글</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <title>블로그 글</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
 <body>
 <div class="p-5 mb-5 text-center</> bg-light">
@@ -15,7 +15,6 @@
   <div class="row">
     <div class="col-lg-8">
       <article>
-        <!-- 여기에 작성 시작 했습니다 -->
         <input type="hidden" id="article-id" th:value="${article.id}">
         <header class="mb-4">
           <h1 class="fw-bolder mb-1" th:text="${article.title}"></h1>
@@ -32,6 +31,6 @@
   </div>
 </div>
 
-<script src="/js/article.js"></script>  <!-- article.js 파일을 추가한다는 의미 -->
+<script src="/js/article.js"></script>
 </body>
 </html>

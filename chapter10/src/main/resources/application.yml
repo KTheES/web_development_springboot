@@ -18,7 +18,7 @@ spring:
           google:
             client-id:
             client-secret:
-              scope:
+            scope:
                 - email
                 - profile
 jwt:
